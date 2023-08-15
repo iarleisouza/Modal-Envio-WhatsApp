@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="login" name="login" placeholder="Login"/>
+    <input type="password" id="senha" name="senha" placeholder="Senha"/>
+    <input type="submit" value="Entrar" onclick="entrar()">
+
+    <script>
+      //  Se for web, você simplesmente pode usar o localStorage:
+        /* var db = window.localStorage
+
+var login = document.querySelector("input#login").text
+
+db.login.setItem("nome", login);
+        */
+
+        function entrar(){
+        var login = document.getElementById("login").value;
+        var senha = document.getElementById("senha").value;
+        alert("Nome de usuario: "+ login+"\n"+"Senha é: "+senha);
+        console.log(login);
+        console.log(senha);
+    }
+       
+      
+    </script>
+</body>
+</html>

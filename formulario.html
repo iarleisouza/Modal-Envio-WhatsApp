@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <form action="#" onsubmit="dados()">
+        <h1>Contato</h1>
+        <input type="text" name="nome" id="nome" placeholder="*&nbsp;nome" value="" required="">
+        <input type="text" name="email" id="email" placeholder="*&nbsp;email" value="" required="">
+        <input type="number" name="telefone" id="telefone" placeholder="*&nbsp;Telefone" value="" required="">
+       <select id="servicos" required>
+        <option value="">Selecione...</option>
+        <option value="">Consorcio</option>
+        <option value="">Financiamento</option>
+       </select>
+       <input type="submit" value="Enviar">
+       
+    </form>
+ 
+    <script>
+      
+               function dados() {
+ 
+ let nome = window.document.getElementById('nome').value;
+ let email = window.document.getElementById('email').value;
+ let telefone = window.document.getElementById('telefone').value;
+ let select = window.document.getElementById('servicos');   
+  let servicos = select.options[select.selectedIndex].text;
+
+ console.log(nome);
+ console.log(email);
+ console.log(telefone);
+ console.log(servicos);
+    
+ let url = ("https://api.whatsapp.com/send?phone=5513982282648&text= %0A Nome: " + nome + "%0A Email: " + email + "%0A Telefone: "+ telefone + "%0A Serviços: "  + servicos );
+  
+ window.open(url);
+    }
+    </script>
+</body>
+</html>
